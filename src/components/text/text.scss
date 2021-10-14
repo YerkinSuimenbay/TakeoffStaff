@@ -1,0 +1,71 @@
+@import '../../../utils/styles/constants/constants';
+
+.text {
+    position: relative;
+    // width: 360px;
+    height: 46px;
+    
+    display: flex;
+    &__label {
+        position: absolute;
+        background-color: #fff;
+        padding: 3px;
+        cursor: text;
+        color: rgba(0, 0, 0, 0.54);
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        white-space: nowrap;
+        transition: all 250ms ;
+        pointer-events: none;
+        border-radius: 5px;
+        
+        &.focused {
+            z-index: 10;
+            cursor: default;
+            color: rgb(229, 151, 0);  
+            color: $input-focus-color;
+            transform: translateY(-160%);
+            font-size: .8rem;
+        }
+
+        &.filled {
+            color: rgba(0, 0, 0, 0.54);
+        }
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #B4BBC7;
+        padding: 14px;
+        font-size: 1rem;
+
+        &:focus {
+            outline-color: $input-focus-color;
+        }
+
+        &:disabled {
+            background-color: inherit;
+            pointer-events: none;
+        }
+    }
+}
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px WHITE inset;
+    // -webkit-box-shadow: 0 0 0px 1000px WHITE inset;
+}
+
+
+.password__eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    & svg {
+        width: 16px;
+    }
+}

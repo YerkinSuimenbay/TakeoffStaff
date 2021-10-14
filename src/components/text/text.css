@@ -1,0 +1,78 @@
+/* primary/main color */
+/* lighter shades of primary color */
+/* darkest grey - used for headings */
+/* grey used for paragraphs */
+.text {
+  position: relative;
+  height: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.text__label {
+  position: absolute;
+  background-color: #fff;
+  padding: 3px;
+  cursor: text;
+  color: rgba(0, 0, 0, 0.54);
+  left: 14px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  white-space: nowrap;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  pointer-events: none;
+  border-radius: 5px;
+}
+
+.text__label.focused {
+  z-index: 10;
+  cursor: default;
+  color: #e59700;
+  color: #015ecc;
+  -webkit-transform: translateY(-160%);
+          transform: translateY(-160%);
+  font-size: .8rem;
+}
+
+.text__label.filled {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.text__input {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #B4BBC7;
+  padding: 14px;
+  font-size: 1rem;
+}
+
+.text__input:focus {
+  outline-color: #015ecc;
+}
+
+.text__input:disabled {
+  background-color: inherit;
+  pointer-events: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px WHITE inset;
+          box-shadow: 0 0 0px 1000px WHITE inset;
+}
+
+.password__eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.password__eye svg {
+  width: 16px;
+}
+/*# sourceMappingURL=text.css.map */

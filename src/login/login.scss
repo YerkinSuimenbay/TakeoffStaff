@@ -1,0 +1,58 @@
+@import '../../utils/styles/constants/constants';
+@import '../../utils/styles/mixins/mixinS';
+
+.login {
+    margin-bottom: 2rem;
+
+    &__logo {
+        color: #000;
+        font-size: 5.5rem;
+        font-weight: 500;
+        text-align: center;
+        width: 95%;
+        margin: 4rem auto;
+
+        &__yellow {
+            color: $yellow-color;
+        }
+    }
+
+    &__center {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+        // display: flex;
+        // flex-direction: column;
+        overflow: auto;
+        margin: 0 auto;
+        padding: 2rem;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 15px 2px rgba(180, 187, 199, 0.8);
+        border-radius: 20px;
+
+        &__title {
+            font-size: 1.3rem;
+            font-weight: 500;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+    
+        &__close-btn-container {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        
+        &__form {
+            display: grid;
+            row-gap: 20px;
+        }
+
+        &__login-btn {
+            width: 360px;
+            height: 50px;
+            margin: 10px auto 0;
+        }
+
+    }
+}
