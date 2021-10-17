@@ -1,10 +1,5 @@
-/* primary/main color */
-/* lighter shades of primary color */
-/* darkest grey - used for headings */
-/* grey used for paragraphs */
 .text {
   position: relative;
-  height: 46px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,7 +41,7 @@
   width: 100%;
   border-radius: 4px;
   border: 1px solid #B4BBC7;
-  padding: 14px;
+  padding: 6px;
   font-size: 1rem;
 }
 

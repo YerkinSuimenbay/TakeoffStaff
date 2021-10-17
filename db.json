@@ -4,36 +4,20 @@
       "id": 1,
       "username": "admin",
       "password": "adminadmin"
-    },
-    {
-      "username": "admin",
-      "password": "adminadmin",
-      "id": 2
-    },
-    {
-      "username": "admin",
-      "password": "adminadmin",
-      "id": 3
-    },
-    {
-      "username": "admin",
-      "password": "adminadmin",
-      "id": 4
-    },
-    {
-      "username": "admin",
-      "password": "adminadmin",
-      "id": 5
     }
   ],
   "contacts": [
     {
-      "id": 1,
-      "name": "test name",
-      "number": 123456
+      "name": "test",
+      "number": 321123434567,
+      "editable": false,
+      "id": 6
+    },
+    {
+      "name": "123",
+      "number": 123,
+      "editable": false,
+      "id": 9
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

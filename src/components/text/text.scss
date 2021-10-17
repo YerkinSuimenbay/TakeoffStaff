@@ -1,9 +1,8 @@
-@import '../../../utils/styles/constants/constants';
-
+$input-focus-color: #015ecc;
 .text {
     position: relative;
     // width: 360px;
-    height: 46px;
+    // height: 46px;
     
     display: flex;
     &__label {
@@ -39,7 +38,7 @@
         width: 100%;
         border-radius: 4px;
         border: 1px solid #B4BBC7;
-        padding: 14px;
+        padding: 6px;
         font-size: 1rem;
 
         &:focus {

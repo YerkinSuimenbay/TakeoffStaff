@@ -11,9 +11,11 @@ import { useState } from "react";
 import Login from "./login/Login";
 import { useGlobalContext } from "./store/context";
 import { Contacts } from "./contacts/Contacts";
+import { Popup } from "./components/popup/Popup";
+import Feedback from "./components/feedback/Feedback";
 
 function App() {
-  const { loggedIn } = useGlobalContext()
+  const { loggedIn, showPopup, showFeedback, setLoggedIn } = useGlobalContext()
   return (
     <Router>
     {!loggedIn && <>
@@ -24,7 +26,10 @@ function App() {
       </>}
       {loggedIn && 
         <main className="main">
+            {showPopup && <Popup />}
+            {showFeedback && <Feedback />}
             <div className="main__center">
+            <button className="logout-btn" onClick={() => {localStorage.removeItem('isLoggedIn'); setLoggedIn(false)}}>Logout</button>
             <Switch>
                 <Route exact path="/" component={Contacts}/>
                 <Route exact path="/home" render={() => <Redirect to='/' />}/>                    

@@ -5,18 +5,6 @@ import axios from 'axios'
 import { useGlobalContext } from '../store/context'
 
 const Login = () => {
-    const fetch = async (event) => {
-        event.preventDefault()
-        try {
-            const response = await axios.post('http://localhost:3000/users', {
-                "username": "admin",
-                "password": "adminadmin"
-              })
-            console.log(response.data);
-        } catch (error) {
-            console.log(error);
-        }
-    }
 
     const { setLoggedIn, setFeedbackInfo, setShowFeedback } = useGlobalContext()
     

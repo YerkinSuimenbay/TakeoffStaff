@@ -12,10 +12,42 @@ axios.defaults.headers.post['Content-Type'] = 'application/json'
 
 const ContextProvider = ({children}) => {
   const [loggedIn, setLoggedIn] = useState(localStorage.isLoggedIn || false)
+  const [showPopup, setShowPopup] = useState(false)
 
+  const [showFeedback, setShowFeedback] = useState(false)
+
+  const [feedbackInfo, setFeedbackInfo] = useState({ type: '', message: 'Default feedback message' })
+
+  const [contacts, setContacts] = useState([
+    // {
+    //   "id": 1,
+    //   "name": "test name",
+    //   "number": 123456,
+    //   "editable": false
+    // },
+])
+
+const getContacts = async () => {
+    try {
+        const response = await axios.get('/contacts/')
+        setContacts(response.data)
+        console.log(response.data);
+    } catch (error) {
+        console.log(error.response);
+    }
+}
     return <AppContext.Provider value={{
         loggedIn, 
-        setLoggedIn
+        setLoggedIn,
+        showPopup,
+        setShowPopup,
+        showFeedback,
+        setShowFeedback,
+        feedbackInfo,
+        setFeedbackInfo,
+        contacts,
+        setContacts,
+        getContacts
     }}>{children}</AppContext.Provider>
 }
 
